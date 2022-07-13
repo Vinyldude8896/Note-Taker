@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const {notes} = require('../../db/db.json');
 
-// router.get('/api/notes', (req, res) => {
+router.get('/api/notes', (req, res) => {
 
-//     res.json(notes)
-// })
+    let results = notes;
+    res.json(results);
+})
 
 module.exports = router;
