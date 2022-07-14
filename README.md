@@ -34,6 +34,9 @@ Multiple days were spent testing to ensure proper data was being written to the 
     I can be contacted by phone as well, but prefer email contact first.
 
 ### Image of example readme.md
+Landing Page
+<img src="./Landing_page.png" alt="Getting started">
 
-<img src="./example_readme.png" alt="Getting started">
+Notes input page
 
+<img src="./example_notes_page.png" alt="Getting started">
