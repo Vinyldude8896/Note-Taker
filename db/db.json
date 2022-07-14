@@ -1,1 +1,19 @@
-{"notes":[{"title":"Test Title","text":"Test text"},[{"title":"Have some me time","text":"Go shopping lol"}],{"title":"This is a new note","text":"For Testing purposes"},{"title":"Do something fun today!","text":"Go to EB, or the record store, or Order you new macbook!"}]}
+{
+  "notesArray": [
+    {
+      "title": "Take Ellie for a walk",
+      "text": "Around the block",
+      "id": "10"
+    },
+    {
+      "title": "Go to Tim Hortons",
+      "text": "Get an iced capp",
+      "id": "1"
+    },
+    {
+      "title": "Have lunch",
+      "text": "Probably a bagel",
+      "id": "2"
+    }
+  ]
+}
