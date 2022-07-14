@@ -1,5 +1,5 @@
 {
-  "notesArray": [
+  "notes": [
     {
       "title": "Take Ellie for a walk",
       "text": "Around the block",
@@ -19,6 +19,11 @@
       "title": "Take a break from stuff",
       "text": "MInd break",
       "id": "3"
+    },
+    {
+      "title": "Listen to a record",
+      "text": "Grace Jones!",
+      "id": "4"
     }
   ]
 }
