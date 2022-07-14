@@ -12,7 +12,7 @@ router.get('/api/notes', (req, res) => {
         res.json(result);
     } else {
         console.log("results not found")
-        res.send(404);
+        // res.sendStatus(404);
     } 
 })
 
@@ -27,38 +27,38 @@ router.post('/api/notes', (req, res) => {
     res.json(note);
 });
 
-router.delete('/api/notes/:id', (req, res) => {
+// router.delete('/api/notes/:id', (req, res) => {
     
-    const id = request.param.id;
+//     const id = request.param.id;
 
-    const findNoteId = (notes, id) => {
-        for (let i = 0; i < notes.length; i++){
-            if(notes[i].id === parseInt(id)){
-                return i;
-            }
-        }
-        return -1
-    }
-    fs.readFile('../../db/db.json', 'utf-8', (err, data) =>{
-        if (err){
-            return response.status(500).send('Sorry, something went worng.')
-        }
-        let note= JSON.parse(data);
-        const notesIndex = findNoteId(note, id)
+//     const findNoteId = (notes, id) => {
+//         for (let i = 0; i < notes.length; i++){
+//             if(notes[i].id === parseInt(id)){
+//                 return i;
+//             }
+//         }
+//         return -1
+//     }
+//     fs.readFile('../../db/db.json', 'utf-8', (err, data) =>{
+//         if (err){
+//             return response.status(500).send('Sorry, something went worng.')
+//         }
+//         let note= JSON.parse(data);
+//         const notesIndex = findNoteId(note, id)
 
-        if (notesIndex === -1) {
-            return response.status(404).send("Sorry, ID was not found");
-        }
+//         if (notesIndex === -1) {
+//             return response.status(404).send("Sorry, ID was not found");
+//         }
 
-        note[notesIndex].complete = true;
+//         note[notesIndex].complete = true;
 
 
 
-        fs.writeFile('../../db/db.json', JSON.stringify(note), () =>{
-            note.splice(notesIndex, id);
-            return response.json({'status': 'Deleted ID' + id})
-        })
-    })
-   });
+//         fs.writeFile('../../db/db.json', JSON.stringify(note), () =>{
+//             note.splice(notesIndex, id);
+//             return response.json({'status': 'Deleted ID' + id})
+//         })
+//     })
+//    });
 
 module.exports = router;
